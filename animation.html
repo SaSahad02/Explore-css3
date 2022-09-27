@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            padding-left: 300px;
+            padding-right: 100px;
+            text-align: center;
+        }
+
+        @keyframes sliding {
+            0% {
+                background-color: yellow;
+                left: 0;
+                top: 0;
+            }
+
+            25% {
+                top: 225px;
+                background-color: red;
+                transform: scale(0.5);
+            }
+
+            50% {
+                top: 0;
+                background-color: yellow;
+                transform: scale(1);
+            }
+
+            75% {
+                top: 225px;
+                background-color: red;
+                transform: scale(0.5);
+            }
+
+            100% {
+                background-color: yellow;
+                left: 650px;
+                top: 0;
+            }
+        }
+
+        .stage {
+            width: 750px;
+            height: 300px;
+            background-color: antiquewhite;
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            border-radius: 50%;
+            position: relative;
+            animation: sliding 2s ease-in-out 0.25s 5 alternate;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lets Checkout Animation</h1>
+</body>
+<div class="stage">
+    <div class="ball"></div>
+</div>
+
+</html>
